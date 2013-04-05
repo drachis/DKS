@@ -1,1 +1,0 @@
-This is where I intend to work on things from my old game idea dragon a kindered spirit. Many things will be rough but I have the skills to make something so I'm going to do it and learn along the way.
