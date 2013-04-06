@@ -13,12 +13,12 @@ class dragon_egg(object):
         #[1,1] = fire + air , [-1,-1] = water,earth 
         self.element=element #should be in the range 0,1
         self.descriptors=[
-            'neutraly ',
-            'a pinch ',
-            'a little ',
-            'somewhat ',
-            'very much ',
-            'entirely '
+            'neutraly',
+            'a pinch',
+            'a little',
+            'somewhat',
+            'very much',
+            'entirely'
             ]
         self.elements=[
             'fire',
