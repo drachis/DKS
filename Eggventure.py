@@ -12,20 +12,20 @@ class dragon_egg(object):
         #2d coordinate for elemnt because of elemental oposition [fire-water,air-earth]
         #[1,1] = fire + air , [-1,-1] = water,earth 
         self.element=element #should be in the range 0,1
-        self.descriptors={
+        self.descriptors=[
             'neutraly ',
             'a pinch ',
             'a little ',
             'somewhat ',
             'very much ',
             'entirely '
-            }
-        self.elements={
+            ]
+        self.elements=[
             'fire',
             'water',
             'air',
             'earth'
-            }
+            ]
         self.name=''
         self.niceName=''
     def _align_mag(self):
@@ -51,15 +51,22 @@ class dragon_egg(object):
     def check_element(self):
         ele=self._align_ele()
         mag=self._align_mag()
-
-        print 'This egg%s is %saligned to %s and %saligned to %s'%(self.niceName,mag[0],ele[0],mag[1],ele[1])
+        n = ''
+        if self.name != '':    
+            n = ' ' + self.name
+        print 'This egg{name} is {mag0} aligned to {ele0} and {mag1} aligned to {ele1}'.format(
+            name=n,
+            mag0=mag[0],
+            ele0=ele[0],
+            mag1=mag[1],
+            ele1=ele[1]
+        )
     def modify_element(self,change):
         for i,element in enumerate(self.element):
             self.element[i]+=change[i]
     def set_name(self,name):
         # name the egg
         self.name=name
-        self.niceName=', '+name+','
         
 if __name__ == '__main__':
     egg0 = dragon_egg(element=[random.random()*2-1, random.random()*2-1])
