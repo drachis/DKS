@@ -1,4 +1,5 @@
 import math
+import random
 
 class dragon_egg(object):
     '''
@@ -12,18 +13,18 @@ class dragon_egg(object):
         #[1,1] = fire + air , [-1,-1] = water,earth 
         self.element=element #should be in the range 0,1
         self.descriptors={
-            0 : 'neutraly ',
-            1 : 'a pinch ',
-            2 : 'a little ',
-            3 : 'somewhat ',
-            4 : 'very much ',
-            5 : 'entirely '
+            'neutraly ',
+            'a pinch ',
+            'a little ',
+            'somewhat ',
+            'very much ',
+            'entirely '
             }
         self.elements={
-            0 : 'fire',
-            1 : 'water',
-            2 : 'air',
-            3 : 'earth'
+            'fire',
+            'water',
+            'air',
+            'earth'
             }
         self.name=''
         self.niceName=''
@@ -42,10 +43,10 @@ class dragon_egg(object):
             ele.append(self.elements[0])
         else:
             ele.append(self.elements[1])
-        if math.fabs(eleRad)>.5:
-            ele.append(self.elements[3])
-        else:
+        if math.fabs(eleRad)<.5:
             ele.append(self.elements[2])
+        else:
+            ele.append(self.elements[3])
         return ele
     def check_element(self):
         ele=self._align_ele()
@@ -61,13 +62,13 @@ class dragon_egg(object):
         self.niceName=', '+name+','
         
 if __name__ == '__main__':
-    egg0 = dragon_egg(element=[.2,.0])
-    egg1 = dragon_egg(element=[.5,.5])
-    egg2 = dragon_egg(element=[-.5,-.5])
-    egg0.check_element()
-    egg0.modify_element(change=(-.5,-.5))
+    egg0 = dragon_egg(element=[random.random()*2-1, random.random()*2-1])
     egg0.set_name('George')
     egg0.check_element()
+    #egg0.modify_element(change=(-random.random()*2-1,random.random()*2-1))    
+    #egg0.check_element()
     print('\n')
+    egg1 = dragon_egg(element=[random.random()*2-1, random.random()*2-1])
+    egg2 = dragon_egg(element=[random.random()*2-1, random.random()*2-1])  
     egg1.check_element()
     egg2.check_element()
