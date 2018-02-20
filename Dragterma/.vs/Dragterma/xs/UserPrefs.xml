@@ -1,0 +1,17 @@
+﻿<Properties StartupConfiguration="{7DC7A83A-9E05-8A77-3ACB-995EBA9DB09C}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/PlayerController.cs">
+    <Files>
+      <File FileName="Assets/PlayerController.cs" Line="83" Column="37" />
+      <File FileName="Assets/EnemyController.cs" Line="37" Column="13" />
+      <File FileName="Assets/UiDodgeReady.cs" Line="19" Column="47" />
+      <File FileName="Assets/UIScore.cs" Line="16" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Dragterma PreferredExecutionTarget="Unity.Editor" />
+  <MultiItemStartupConfigurations />
+</Properties>
